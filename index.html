@@ -455,7 +455,7 @@ function wktCard(w,clickable){
   html+='</div>';
   if(w.type==='cardio'&&w.cardio){var c=w.cardio;html+='<div style="font-size:12px;color:var(--muted)">'+[c.dist?c.dist+'km':'',c.duration?Math.round(c.duration/60)+"'min":'',c.pace?c.pace+'/km':''].filter(Boolean).join(' · ')+'</div>';}
   else if(w.type==='wellness'&&w.wellness){html+='<div style="font-size:12px;color:var(--muted)">'+(w.wellness.duration?Math.round(w.wellness.duration/60)+" min":'')+'</div>';}
-  else{html+='<div style="font-size:12px;color:var(--muted)">'+tot+' sets'+(vol?' · '+Math.round(vol)+'kg vol':'')+'</div>';}
+  else{html+='<div style="font-size:12px;color:var(--green)">Completed</div>';}
   html+='</div></div>';
   return html;
 }
